@@ -18,7 +18,7 @@ public class codigo_lucas {
         
         //Path mipath2=Paths.get("C:/Users/Alejo/Desktop/Java/objeto_resultado.java");
         /*aca arriba tenes que poner el path de resultado.txt */
-
+                
         probando2(mipath2, "probando a ver si funciona");
         System.out.println("este es el contenido: " + Files.readAllLines(Paths.get(mipath2)));
         String partidosFile = "partidos.txt";
