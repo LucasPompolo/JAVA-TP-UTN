@@ -24,7 +24,7 @@ public class codigo_lucas {
         String partidosFile = "partidos.txt";
         String resultadosFile = "resultados.txt";
         ArrayList<Partido> partidos = new ArrayList<>();
-        ArrayList<Resultado> resultados2 = new ArrayList<>();
+        ArrayList<Resultado> resultados = new ArrayList<>();
         ArrayList<Ronda> ronda=new ArrayList<>();
 
 
@@ -77,8 +77,8 @@ public class codigo_lucas {
             
             while (line != null) {
                 String[] fields = line.split(",");
-                Resultado resultado2 = new Resultado(fields[0], fields[1]);
-                resultados2.add(resultados2);
+                Resultado resultado = new Resultado(fields[0], fields[1]);
+                resultados.add(resultado);
                 line = resultadosReader.readLine();
                 // que lea el resultado
             }
@@ -88,8 +88,8 @@ public class codigo_lucas {
             int puntaje = 0;
             for (int i = 0; i < partidos.size(); i++) {
                 Partido partido = partidos.get(i);
-                Resultado resultado2 = resultados2.get(i);
-                if (partido.getResultado().equals(resultado2.getResultado())) {
+                Resultado resultado = resultados.get(i);
+                if (partido.getResultado().equals(resultado.getResultado())) {
                     puntaje++;
                 }
             }
@@ -102,13 +102,13 @@ public class codigo_lucas {
         }
 
 
-        public static void probando(Path path, String contenido)  throws IOException{
+        public static void probando(Path path)  throws IOException{
             if(Files.exists(path)) {
                 System.out.println("archivo de objeto_partido");
             }
         }
 
-        public static void probando2(Path path2, String contenido2)  throws IOException{
+        public static void probando2(Path path2)  throws IOException{
             if(Files.exists(path2)) {
                 System.out.println("archivo de objeto_resultado");
             }
