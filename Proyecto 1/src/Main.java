@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.net.URI;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -9,18 +10,21 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) throws IOException{
 
-        // Path mipath=Paths.get("C:/Users/Alejo/Desktop/Java/Secundaria.java");
-        // probando2(mipath, "probando a ver si funciona");
-        // System.out.println("este es el contenido: " + Files.readAllLines(Paths.get(mipath)));
+        //Path mipath=Paths.get("C:/Users/Alejo/Desktop/codigo Lucas y Alejo/Secundaria.java");
+        //probando2(mipath, "probando a ver si funciona");
+        //System.out.println("este es el contenido: " + Files.readAllLines(Paths.get(mipath)));
 
-        // System.out.println("----------------");
-        
-        Path mipath2=Paths.get("C:/Users/Lucas/Desktop/Java/objeto_resultado.java");
-               
-        probando2(mipath2, "probando a ver si funciona");
-        System.out.println("este es el contenido: " + Files.readAllLines(Paths.get(mipath2)));
-        String partidosFile = "partidos.txt";
-        String resultadosFile = "resultados.txt";
+        System.out.println("----------------");
+
+        //Path mipath2=Paths.get("C:/Users/Alejo/Desktop/codigo Lucas y Alejo/objeto_resultado.java");
+
+        //probando(mipath2, "probando a ver si funciona");
+        //System.out.println("este es el contenido: " + Files.readAllLines(Paths.get(mipath2)));
+        String objeto_resultado="C:/Users/Alejo/Desktop/codigo Lucas y Alejo/objeto_resultado.java";
+        String secundaria="C:/Users/Alejo/Desktop/codigo Lucas y Alejo/Secundaria.java";
+        String SecundariaFile = "C:/Users/Alejo/Desktop/codigo Lucas y Alejo/Secundaria.java";
+        String resultadosFile = "C:/Users/Alejo/Desktop/codigo Lucas y Alejo/objeto_resultado.java";
+        ArrayList<Equipo> equipos = new ArrayList<>();
         ArrayList<Partido> partidos = new ArrayList<>();
         ArrayList<Resultado> resultados = new ArrayList<>();
         ArrayList<Ronda> ronda=new ArrayList<>();
@@ -45,6 +49,7 @@ public class Main {
             "Mexico");
 
         System.out.println(Equipo.getEquipos());
+
 
         // objeto_partido Polonia= new objeto_partido(
         //     "Polonia",
@@ -106,12 +111,7 @@ public class Main {
             System.out.println("Error: " + e.getMessage());
         }
 
-
-        // public static void probando(Path path)  throws IOException{
-        //     if(Files.exists(path)) {
-        //         System.out.println("archivo de objeto_partido");
-        //     }
-        // }
+       
 
         public static void probando2(Path path2)  throws IOException{
             if(Files.exists(path2)) {
